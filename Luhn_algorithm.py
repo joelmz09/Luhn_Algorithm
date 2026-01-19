@@ -1,3 +1,4 @@
+##The key idea of the Luhn algorithm is that you start from the right side of the card number and read it from right to left. Then, you add the digits in the odd positions (1st, 3rd, 5th, etc., counting from the right) exactly as they are. After that, you take the digits in the even positions (2nd, 4th, 6th, etc.) and double them. If doubling a digit gives a result of 10 or more, you add the two digits of that number together (for example, 8×2 = 16, and 1 + 6 = 7, which is the same as subtracting 9). Finally, you add all the values, and if the total is divisible by 10, meaning (total % 10) == 0, the card number is considered valid; otherwise, it is invalid.
 def verify_card_number(card_number):
     sum_of_odd_digits = 0
     card_number_reversed = card_number[::-1]
